@@ -3,7 +3,7 @@
   "description": "Sets the AWS IAM Account Alias with a Custom Resource",
   "repository": {
     "type": "git",
-    "url": "https://github.com/p6m7g8/p6-namer.git"
+    "url": "https://github.com/p6m7g8/p6-cdk-namer.git"
   },
   "scripts": {
     "build": "npx projen build",
