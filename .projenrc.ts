@@ -4,7 +4,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Philip M. Gollucci',
   authorAddress: 'pgollucci@p6m7g8.com',
   authorOrganization: true,
-  repositoryUrl: 'https://github.com/p6m7g8/p6-namer.git',
+  repositoryUrl: 'https://github.com/p6m7g8/p6-cdk-namer.git',
   description: 'Sets the AWS IAM Account Alias with a Custom Resource',
   stability: 'stable',
   keywords: [
