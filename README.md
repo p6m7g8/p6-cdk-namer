@@ -2,11 +2,6 @@ AWS CDK setups up a Custom Resource via Cloud Formation which sets the AWS IAM A
 
 # P6Namer
 
-
-## CI/CD
-
-![release.yml](https://img.shields.io/github/workflow/status/p6m7g8/p6-cdk-namer/release) ![pull-request-lint.yml](https://img.shields.io/github/workflow/status/p6m7g8/p6-cdk-namer/pull-request-lint) ![upgrade-main.yml](https://img.shields.io/github/workflow/status/p6m7g8/p6-cdk-namer/upgrade-main) ![auto-approve.yml](https://img.shields.io/github/workflow/status/p6m7g8/p6-cdk-namer/auto-approve)
-
 ## LICENSE
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) 
