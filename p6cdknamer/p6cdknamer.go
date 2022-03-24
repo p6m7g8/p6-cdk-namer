@@ -1,13 +1,13 @@
 // Sets the AWS IAM Account Alias with a Custom Resource
-package p6namer
+package p6cdknamer
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/p6m7g8/p6-cdk-namer/p6namer/jsii"
+	_init_ "github.com/p6m7g8/p6-cdk-namer/p6cdknamer/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/p6m7g8/p6-cdk-namer/p6namer/internal"
+	"github.com/p6m7g8/p6-cdk-namer/p6cdknamer/internal"
 )
 
 type IP6NamerProps interface {
@@ -141,7 +141,7 @@ func NewP6Namer(scope constructs.Construct, id *string, props IP6NamerProps) P6N
 	j := jsiiProxy_P6Namer{}
 
 	_jsii_.Create(
-		"p6-namer.P6Namer",
+		"p6-cdk-namer.P6Namer",
 		[]interface{}{scope, id, props},
 		&j,
 	)
@@ -153,7 +153,7 @@ func NewP6Namer_Override(p P6Namer, scope constructs.Construct, id *string, prop
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"p6-namer.P6Namer",
+		"p6-cdk-namer.P6Namer",
 		[]interface{}{scope, id, props},
 		p,
 	)
@@ -169,7 +169,7 @@ func P6Namer_IsConstruct(x interface{}) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"p6-namer.P6Namer",
+		"p6-cdk-namer.P6Namer",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -185,7 +185,7 @@ func P6Namer_IsResource(construct constructs.IConstruct) *bool {
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"p6-namer.P6Namer",
+		"p6-cdk-namer.P6Namer",
 		"isResource",
 		[]interface{}{construct},
 		&returns,

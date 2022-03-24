@@ -1,4 +1,4 @@
-package p6namer
+package p6cdknamer
 
 import (
 	"reflect"
@@ -8,7 +8,7 @@ import (
 
 func init() {
 	_jsii_.RegisterInterface(
-		"p6-namer.IP6NamerProps",
+		"p6-cdk-namer.IP6NamerProps",
 		reflect.TypeOf((*IP6NamerProps)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "accountAlias", GoGetter: "AccountAlias"},
@@ -18,7 +18,7 @@ func init() {
 		},
 	)
 	_jsii_.RegisterClass(
-		"p6-namer.P6Namer",
+		"p6-cdk-namer.P6Namer",
 		reflect.TypeOf((*P6Namer)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "applyRemovalPolicy", GoMethod: "ApplyRemovalPolicy"},
