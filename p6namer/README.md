@@ -17,22 +17,22 @@ the AWS IAM Account Alias
 
 ## LICENSE
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/p6m7g8/p6-namer)
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)](https://opensource.org/licenses/Apache-2.0) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/p6m7g8/p6-cdk-namer)
 
 ## CI/CD
 
-![GitHub Build Workflow Status](https://img.shields.io/github/workflow/status/p6m7g8/p6-namer/Build) ![GitHub Release Workflow Statuss](https://github.com/p6m7g8/p6-namer/workflows/Release/badge.svg)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/p6m7g8/p6-namer) ![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=p6m7g8_p6-namer&metric=alert_status)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/p6m7g8/p6-namer) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/p6m7g8/p6-namer)
+![GitHub Build Workflow Status](https://img.shields.io/github/workflow/status/p6m7g8/p6-cdk-namer/Build) ![GitHub Release Workflow Statuss](https://github.com/p6m7g8/p6-cdk-namer/workflows/Release/badge.svg)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/p6m7g8/p6-cdk-namer) ![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=p6m7g8_p6-cdk-namer&metric=alert_status)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/p6m7g8/p6-cdk-namer) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/p6m7g8/p6-cdk-namer)
 
 ## Distributions
 
 | Method | Version | Daily | Weekly | Monthly | Yearly | Total |
  --------| --------| ------| -------| --------| -------|-------|
-| NPM      | ![npm](https://img.shields.io/npm/v/p6-namer) |       | [![NPM Weekly Downloads](https://img.shields.io/npm/dw/p6-namer)](https://img.shields.io/npm/dw/p6-namer) | [![NPM Monthly Downloads](https://img.shields.io/npm/dm/p6-namer)](https://img.shields.io/npm/dm/p6-namer) | [![NPM Yearly Downloads](https://img.shields.io/npm/dy/p6-namer)](https://img.shields.io/npm/dy/p6-namer) | [![NPM Total Downloads](https://img.shields.io/npm/dt/p6-namer)](https://img.shields.io/npm/dt/p6-namer) |
-| PYPI      | ![PyPI](https://img.shields.io/pypi/v/p6-namer) | ![PyPI - Downloads](https://img.shields.io/pypi/dd/p6-namer) | ![PyPI - Downloads](https://img.shields.io/pypi/dw/p6-namer) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/p6-namer)         |       |        |
+| NPM      | ![npm](https://img.shields.io/npm/v/p6-cdk-namer) |       | [![NPM Weekly Downloads](https://img.shields.io/npm/dw/p6-cdk-namer)](https://img.shields.io/npm/dw/p6-cdk-namer) | [![NPM Monthly Downloads](https://img.shields.io/npm/dm/p6-cdk-namer)](https://img.shields.io/npm/dm/p6-cdk-namer) | [![NPM Yearly Downloads](https://img.shields.io/npm/dy/p6-cdk-namer)](https://img.shields.io/npm/dy/p6-cdk-namer) | [![NPM Total Downloads](https://img.shields.io/npm/dt/p6-cdk-namer)](https://img.shields.io/npm/dt/p6-cdk-namer) |
+| PYPI      | ![PyPI](https://img.shields.io/pypi/v/p6-cdk-namer) | ![PyPI - Downloads](https://img.shields.io/pypi/dd/p6-cdk-namer) | ![PyPI - Downloads](https://img.shields.io/pypi/dw/p6-cdk-namer) | ![PyPI - Downloads](https://img.shields.io/pypi/dm/p6-cdk-namer)         |       |        |
 | Nuget      | ![Nuget](https://img.shields.io/nuget/v/P6m7g8.P6Namer) |       |        |         |       | ![NuGet Downloads](https://img.shields.io/nuget/dt/P6m7g8.P6Namer.svg) |
-| Maven Central | ![Maven Central](https://img.shields.io/maven-central/v/com.github.p6m7g8/p6-namer) |       | ![Maven](https://jitpack.io/v/com.github.p6m7g8/p6-namer/week.svg) | ![Maven](https://jitpack.io/v/com.github.p6m7g8/p6-namer/month.svg)         |       |        |
+| Maven Central | ![Maven Central](https://img.shields.io/maven-central/v/com.github.p6m7g8/p6-cdk-namer) |       | ![Maven](https://jitpack.io/v/com.github.p6m7g8/p6-cdk-namer/week.svg) | ![Maven](https://jitpack.io/v/com.github.p6m7g8/p6-cdk-namer/month.svg)         |       |        |
 | GoLang     |         |       |        |         |       |        |
 | Kotlin     |         |       |        |         |       |        |
 
@@ -57,7 +57,7 @@ This function is idempotent so can be re-run with the same input.
 ```ts
 ...
 
-import { P6Namer } from 'p6-namer';
+import { P6Namer } from 'p6-cdk-namer';
 
 new P6Namer(this, 'AccountAlias', {
   accountAlias: 'THE-ALIAS',

@@ -9,7 +9,7 @@ test("P6Namer components", () => {
   const stack = new cdk.Stack(app, "MyStack");
 
   // WHEN
-  new P6Namer(stack, "p6-namer", {
+  new P6Namer(stack, "p6-cdk-namer", {
     accountAlias: "theAlias",
   });
 

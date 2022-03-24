@@ -1,4 +1,4 @@
-module github.com/p6m7g8/p6-namer/p6namer
+module github.com/p6m7g8/p6-cdk-namer/p6namer
 
 go 1.16
 
