@@ -1,5 +1,5 @@
 {
-  "name": "p6-namer",
+  "name": "p6-cdk-namer",
   "description": "Sets the AWS IAM Account Alias with a Custom Resource",
   "repository": {
     "type": "git",

@@ -3,11 +3,11 @@ package p6namer
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/p6m7g8/p6-namer/p6namer/jsii"
+	_init_ "github.com/p6m7g8/p6-cdk-namer/p6namer/jsii"
 
 	"github.com/aws/aws-cdk-go/awscdk/v2"
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/p6m7g8/p6-namer/p6namer/internal"
+	"github.com/p6m7g8/p6-cdk-namer/p6namer/internal"
 )
 
 type IP6NamerProps interface {
