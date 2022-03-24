@@ -157,7 +157,7 @@
         "packageId": "P6m7g8.P6Namer"
       },
       "go": {
-        "moduleName": "github.com/p6m7g8/p6-namer"
+        "moduleName": "github.com/p6m7g8/p6-cdk-namer"
       }
     },
     "tsc": {
