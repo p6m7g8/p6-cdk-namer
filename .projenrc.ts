@@ -1,6 +1,6 @@
 import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
-  name: 'p6-namer',
+  name: 'p6-cdk-namer',
   author: 'Philip M. Gollucci',
   authorAddress: 'pgollucci@p6m7g8.com',
   authorOrganization: true,
