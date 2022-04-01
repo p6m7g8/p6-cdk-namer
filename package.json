@@ -46,7 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
     "aws-cdk-lib": "2.15.0",
-    "cdk-iam-floyd": "^0.345.0",
+    "cdk-iam-floyd": "^0.346.0",
     "constructs": "10.0.5",
     "esbuild": "^0.14.29",
     "eslint": "^8",
@@ -77,8 +77,8 @@
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.93",
-    "aws-sdk": "^2.1104.0",
-    "cdk-iam-floyd": "^0.345.0"
+    "aws-sdk": "^2.1105.0",
+    "cdk-iam-floyd": "^0.346.0"
   },
   "bundledDependencies": [
     "@types/aws-lambda",
