@@ -815,9 +815,9 @@
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
 "@types/prettier@^2.1.5":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.4.tgz#5d9b63132df54d8909fce1c3f8ca260fdd693e17"
-  integrity sha512-ReVR2rLTV1kvtlWFyuot+d1pkpG2Fw/XKE3PDAdj57rbM97ttSp9JZ2UsP+2EHTylra9cUf6JA7tGwW1INzUrA==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.6.0.tgz#efcbd41937f9ae7434c714ab698604822d890759"
+  integrity sha512-G/AdOadiZhnJp0jXCaBQU449W2h716OW/EoXeYkCytxKL06X1WCXB4DZpp8TpZ8eyIJVS1cw4lrlkkSYU21cDw==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -1404,10 +1404,10 @@ case@1.6.3, case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk-iam-floyd@^0.350.0:
-  version "0.350.0"
-  resolved "https://registry.yarnpkg.com/cdk-iam-floyd/-/cdk-iam-floyd-0.350.0.tgz#946f1f9d2d2e0a499bf356657ca9af8f2978d41f"
-  integrity sha512-T/CgZ/JTKMIrkh4IW3x2zar9+lUgsQIWLTnCcBdeF4SVVmICOw3VEA6Wh1G5YyGRdFeIqqmy4LsBMAdiyk7Qvg==
+cdk-iam-floyd@^0.351.0:
+  version "0.351.0"
+  resolved "https://registry.yarnpkg.com/cdk-iam-floyd/-/cdk-iam-floyd-0.351.0.tgz#8e1ecf8480cbcf532628a3765d615a04e65e9edb"
+  integrity sha512-QB8oUrjS/eI17oLMWES2SqebhFStH5JQPBtyJhTwlshDzUKnkg1A09/hLyvyK4HJiru29EUm/utkwKuWqQv5Iw==
   dependencies:
     "@udondan/common-substrings" "^3.0.2"
     regex-parser "^2.2.11"
@@ -3955,10 +3955,10 @@ jsii-diff@^1.56.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^6.3.3:
-  version "6.3.3"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.3.tgz#a7d27ecc72db26643d7248411a8c6a5db362b2b2"
-  integrity sha512-asVgCk2V/Vp5IGV6JTzn6MLGVap9veo/3yHu7jOQGpohERDgvFn1FAmiJemmzn7UDWFAagQBCgpPDB+1JeGeMA==
+jsii-docgen@^6.3.4:
+  version "6.3.5"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-6.3.5.tgz#5de17ada99636c9d8479c7da78ebca5c36026674"
+  integrity sha512-Y7u49O4F8n7nKd+w3DcUxfTy5I0fjf8BiJ7TUjKG9xRTOY+OHzctCtdOpTdi4Qv+QzLJpM1wze7GgBGCsQAWzA==
   dependencies:
     "@jsii/spec" "^1.56.0"
     case "^1.6.3"
@@ -6024,10 +6024,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typedoc@^0.22.14:
-  version "0.22.14"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.22.14.tgz#c690677c31bc1dd5618caffc001bfa8554c4c02f"
-  integrity sha512-tlf9wIcsrnQSjetStrnRutuy2RjZkG5PK2umwveZLTkuC2K9VywOZTdu2G19BdOPzGrhZjf9WK7pthXqnFQejg==
+typedoc@^0.22.15:
+  version "0.22.15"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.22.15.tgz#c6ad7ed9d017dc2c3a06c9189cb392bd8e2d8c3f"
+  integrity sha512-CMd1lrqQbFvbx6S9G6fL4HKp3GoIuhujJReWqlIvSb2T26vGai+8Os3Mde7Pn832pXYemd9BMuuYWhFpL5st0Q==
   dependencies:
     glob "^7.2.0"
     lunr "^2.3.9"
