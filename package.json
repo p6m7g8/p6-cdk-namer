@@ -76,7 +76,7 @@
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "@types/aws-lambda": "^8.10.93",
+    "@types/aws-lambda": "^8.10.94",
     "aws-sdk": "^2.1116.0",
     "cdk-iam-floyd": "^0.354.0"
   },
