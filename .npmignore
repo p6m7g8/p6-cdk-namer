@@ -1,16 +1,8 @@
-
-# Exclude typescript source and config
-*.ts
-tsconfig.json
-*.tsbuildinfo
-
-# Include javascript files and typescript declarations
-!*.js
-!*.d.ts
-
-# Exclude jsii outdir
-dist
-
-# Include .jsii and .jsii.gz
 !.jsii
 !.jsii.gz
+.github
+assets
+cdk.out
+coverage
+dist
+lib
