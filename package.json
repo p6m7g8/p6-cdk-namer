@@ -3,7 +3,7 @@
   "description": "Sets the AWS IAM Account Alias with a Custom Resource",
   "repository": {
     "type": "git",
-    "url": "https://github.com/p6m7g8/p6-cdk-namer.git"
+    "url": "git+https://github.com/p6m7g8/p6-cdk-namer.git"
   },
   "scripts": {
     "build": "pnpm run compile && pnpm run lint && pnpm run jsii:docgen && pnpm run test && pnpm run jsii:pacmak:parallel && pnpm run diagram:update",
@@ -54,6 +54,7 @@
     "jsii": "^5.5.4",
     "jsii-docgen": "^10.5.5",
     "jsii-pacmak": "^1.104.0",
+    "publib": "^0.2.906",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "~5.6.3"
