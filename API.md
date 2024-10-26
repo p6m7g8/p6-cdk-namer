@@ -82,11 +82,12 @@ account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#p6-cdk-namer.P6Namer.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#p6-cdk-namer.P6Namer.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
 | <code><a href="#p6-cdk-namer.P6Namer.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="p6-cdk-namer.P6Namer.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="p6-cdk-namer.P6Namer.isConstruct"></a>
 
 ```typescript
 import { P6Namer } from 'p6-cdk-namer'
@@ -96,11 +97,41 @@ P6Namer.isConstruct(x: any)
 
 Checks if `x` is a construct.
 
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
 ###### `x`<sup>Required</sup> <a name="x" id="p6-cdk-namer.P6Namer.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isOwnedResource` <a name="isOwnedResource" id="p6-cdk-namer.P6Namer.isOwnedResource"></a>
+
+```typescript
+import { P6Namer } from 'p6-cdk-namer'
+
+P6Namer.isOwnedResource(construct: IConstruct)
+```
+
+Returns true if the construct was created by CDK, and false otherwise.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="p6-cdk-namer.P6Namer.isOwnedResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
 
 ---
 
