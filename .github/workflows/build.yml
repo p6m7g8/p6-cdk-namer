@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  pull_request: {}
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+
+      - name: Install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run build
+        run: pnpm run ci:gha
+
+      - name: Run Package
+        run: pnpm run jsii:pacmak:parallel
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          name: build-artifact
+          path: dist
