@@ -7,7 +7,8 @@
   },
   "scripts": {
     "build": "pnpm run ci && pnpm run jsii:pacmak:parallel",
-    "ci": "pnpm run compile && pnpm run lint && pnpm run jsii:docgen && pnpm run test && pnpm run diagram:update",
+    "ci:gha": "pnpm run compile && pnpm run lint && pnpm run jsii:docgen && pnpm run test",
+    "ci": "pnpm run ci:gha && pnpm run diagram:update",
     "clean": "rm -rf dist/ lib/ cdk.out/ coverage/ .jsii",
     "compile": "pnpm tsc:compile && pnpm run jsii:compile",
     "diagram:run": "pnpm run diagram:update && pnpm run diagram:serve",

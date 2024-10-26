@@ -26,4 +26,7 @@ jobs:
         run: pnpm install
 
       - name: Run build
-        run: pnpm run build
+        run: pnpm run ci:gha
+
+      - name: Run Package
+        run: pnpm run jsii:pacmak:parallel
