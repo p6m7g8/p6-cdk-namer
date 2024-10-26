@@ -27,11 +27,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Download Artifact
-        uses: actions/download-artifact@v4.1.8
+      - name: Restore build artifact from cache
+        uses: actions/cache@v3
         with:
-          name: build-artifact
           path: dist
+          key: ${{ runner.os }}-build-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-
 
       - name: Shuffle Dirs
         run: |
