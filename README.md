@@ -14,7 +14,6 @@ AWS CDK setups up a Custom Resource via Cloud Formation which sets the AWS IAM A
 
 ```ts
 ...
-
 import { P6Namer } from 'p6-cdk-namer';
 
 new P6Namer(this, 'AccountAlias', {
