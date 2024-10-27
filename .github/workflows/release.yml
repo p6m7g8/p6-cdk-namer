@@ -22,6 +22,8 @@ jobs:
         run: npm run jsii:pacmak:parallel
       - name: Clean up node_modules
         run: bin/clean_tgz.bash
+      - name: Bump version
+        run: bin/version.bash
       - name: Upload artifact
         uses: actions/upload-artifact@v4.4.3
         with:
@@ -118,11 +120,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}
         run: |
-         set -x
           git config --global user.name "$GIT_USER_NAME"
           git config --global user.email "$GIT_USER_EMAIL"
           git remote set-url origin https://$GH_TOKEN@github.com/p6m7g8/p6-cdk-namer.git
-          git remote -v
           npm run publish:golang
   release_maven:
     name: Release to Maven
