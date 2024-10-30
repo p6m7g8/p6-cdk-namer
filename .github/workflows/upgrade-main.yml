@@ -35,9 +35,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node_modules-
       - name: Update Deps
+        run: yarn up
+      - name: Gather Diff
+        id: diff
         run: |
-          yarn up
-          git diff
+          git diff > diff.txt
+          echo "diff<<EOF" >> $GITHUB_ENV
+          cat diff.txt >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
       - name: Create Pull Request
         id: create-pr
         uses: peter-evans/create-pull-request@v7.0.5
@@ -47,9 +52,12 @@ jobs:
             chore(deps): upgrade dependencies
           branch: github-actions/upgrade-main
           title: "chore(deps): upgrade dependencies"
-          labels: auto-approve
-          body: |-
-            Upgrades project dependencies.
+          labels: auto-merge
+          body: |
+              Upgrades project dependencies. The following changes were made:
+              ```diff
+              ${{ env.diff }}
+              ```
           author: github-actions <github-actions@github.com>
           committer: github-actions <github-actions@github.com>
           signoff: true
