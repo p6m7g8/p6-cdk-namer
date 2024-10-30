@@ -41,7 +41,14 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REF: ${{ github.ref }}
         run: |
-          gh release create $(cat dist/releasetag.txt) -R "$GITHUB_REPOSITORY" -F dist/changelog.md -t $(cat dist/releasetag.txt) --target "$GITHUB_REF"
+          TAG_NAME=$(cat dist/releasetag.txt)
+
+          if gh release view "$TAG_NAME" -R "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            echo "Release with tag $TAG_NAME already exists. Skipping release creation."
+          else
+            gh release create "$TAG_NAME" -R "$GITHUB_REPOSITORY" -F dist/changelog.md -t "$TAG_NAME" --target "$GITHUB_REF"
+            echo "Release with tag $TAG_NAME created successfully."
+          fi
 
   release_npmjs:
     name: Release to NPM JS
