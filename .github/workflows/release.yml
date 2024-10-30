@@ -193,7 +193,7 @@ jobs:
       - name: Compile
         run: yarn run compile
       - name: JSII Pacmak GoLang
-        run: yarn run jsii:pacmak:golang
+        run: yarn run jsii:pacmak:go
       - name: Publish to GoLang
         env:
           GIT_USER_NAME: github-actions
@@ -204,4 +204,4 @@ jobs:
           git config --global user.name "$GIT_USER_NAME"
           git config --global user.email "$GIT_USER_EMAIL"
           git remote set-url origin "https://$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-          yarn run publish:go
+          yarn run publish:golang
