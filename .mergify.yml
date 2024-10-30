@@ -3,9 +3,9 @@ queue_rules:
     commit_message_template: |-
       {{ title }} (#{{ number }})
       {{ body }}
-    merge_method: rebase
+    merge_method: squash
 pull_request_rules:
-  - name: Put PRs in queue (rebase)
+  - name: Put PRs in queue (squash)
     conditions:
       - base = main
       - "#approved-reviews-by>=1"
@@ -14,7 +14,7 @@ pull_request_rules:
     actions:
       delete_head_branch:
       queue:
-        merge_method: rebase
+        merge_method: squash
   - name: Label core contributions
     actions:
       label:
