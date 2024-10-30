@@ -13,10 +13,13 @@ jobs:
     steps:
       - name: no-op
         run: echo "No-op"
+
   release_github:
     name: Release to Github
     needs: release
     runs-on: ubuntu-latest
+    outputs:
+      bump: ${{ steps.bump.outputs.bump }}
     if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
     steps:
       - name: Checkout code
@@ -24,21 +27,25 @@ jobs:
         with:
           fetch-depth: 0
       - name: Bump version
-        run: bin/version.bash
+        id: bump
+        run: |
+          bin/version.bash
+          grep -qE "^[a-zA-Z]+!\:|^major|^feat|^fix" dist/changelog.md && echo "::set-output name=bump::true" || echo "::set-output name=bump::false"
       - name: Github Release
         env:
           GITHUB_TOKEN: ${{ secrets.P6_A_GH_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REF: ${{ github.ref }}
         run: |
-            gh release create $(cat dist/releasetag.txt) -R "$GITHUB_REPOSITORY" -F dist/changelog.md -t $(cat dist/releasetag.txt) --target "$GITHUB_REF"
+          gh release create $(cat dist/releasetag.txt) -R "$GITHUB_REPOSITORY" -F dist/changelog.md -t $(cat dist/releasetag.txt) --target "$GITHUB_REF"
+
   release_npmjs:
     name: Release to NPM JS
-    needs: release
+    needs: release_github
     runs-on: ubuntu-latest
     container:
       image: jsii/superchain:1-bookworm-slim-node22
-    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    if: ${{ needs.release_github.outputs.bump == 'true' && !contains(github.event.head_commit.message, 'chore(release):') }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
@@ -72,13 +79,14 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: yarn run publish:npm
+
   release_pypi:
     name: Release to PYPI
-    needs: release
+    needs: release_github
     runs-on: ubuntu-latest
     container:
       image: jsii/superchain:1-bookworm-slim-node22
-    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    if: ${{ needs.release_github.outputs.bump == 'true' && !contains(github.event.head_commit.message, 'chore(release):') }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
@@ -117,13 +125,14 @@ jobs:
           TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         run: yarn run publish:pypi
+
   release_nuget:
     name: Release to Nuget
-    needs: release
+    needs: release_github
     runs-on: ubuntu-latest
     container:
       image: jsii/superchain:1-bookworm-slim-node22
-    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    if: ${{ needs.release_github.outputs.bump == 'true' && !contains(github.event.head_commit.message, 'chore(release):') }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
@@ -158,13 +167,14 @@ jobs:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
           yarn run publish:nuget
+
   release_golang:
     name: Release to GoLang
-    needs: release
+    needs: release_github
     runs-on: ubuntu-latest
     container:
       image: jsii/superchain:1-bookworm-slim-node22
-    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    if: ${{ needs.release_github.outputs.bump == 'true' && !contains(github.event.head_commit.message, 'chore(release):') }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
