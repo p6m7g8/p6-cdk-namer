@@ -34,7 +34,7 @@ jobs:
             gh release create $(cat dist/releasetag.txt) -R "$GITHUB_REPOSITORY" -F dist/changelog.md -t $(cat dist/releasetag.txt) --target "$GITHUB_REF"
   release_npmjs:
     name: Release to NPM JS
-    needs: release_github
+    needs: release
     runs-on: ubuntu-latest
     container:
       image: jsii/superchain:1-bookworm-slim-node22
