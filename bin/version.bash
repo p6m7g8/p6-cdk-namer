@@ -16,6 +16,10 @@ main() {
     major=$((major + 1))
     minor=0
     patch=0
+  elif echo "$subject_lines" | grep -qE "^[a-zA-Z]+!\:"; then
+    major=$((major + 1))
+    minor=0
+    patch=0
   elif echo "$subject_lines" | grep -q "^major"; then
     major=$((major + 1))
     minor=0
