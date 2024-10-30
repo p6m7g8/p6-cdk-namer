@@ -117,7 +117,7 @@ jobs:
           TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         run: yarn run publish:pypi
- release_nuget:
+  release_nuget:
     name: Release to Nuget
     needs: release
     runs-on: ubuntu-latest
