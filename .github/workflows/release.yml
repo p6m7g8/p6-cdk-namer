@@ -30,7 +30,11 @@ jobs:
         id: bump
         run: |
           bin/version.bash
-          grep -qE "^[a-zA-Z]+!\:|^major|^feat|^fix" dist/changelog.md && echo "::set-output name=bump::true" || echo "::set-output name=bump::false"
+          if grep -qE "^[a-zA-Z]+!\:|^major|^feat|^fix" dist/changelog.md; then
+            echo "bump=true" >> $GITHUB_OUTPUT
+          else
+            echo "bump=false" >> $GITHUB_OUTPUT
+          fi
       - name: Github Release
         env:
           GITHUB_TOKEN: ${{ secrets.P6_A_GH_TOKEN }}
