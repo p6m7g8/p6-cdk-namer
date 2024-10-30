@@ -9,25 +9,20 @@ main() {
   local minor=$(echo $latest_tag | cut -d. -f2)
   local patch=$(echo $latest_tag | cut -d. -f3)
 
-  local log_lines=$(git log $latest_tag..HEAD --pretty="format:%B")
-  local subject_lines=$(git log $latest_tag..HEAD --pretty="format:%s")
+  local log_lines=$(git log $latest_tag..HEAD --pretty="format:- %s")
 
   if echo "$log_lines" | grep -q "BREAKING CHANGE"; then
     major=$((major + 1))
     minor=0
     patch=0
-  elif echo "$subject_lines" | grep -qE "^[a-zA-Z]+!\:"; then
+  elif echo "$log_lines" | grep -q "major"; then
     major=$((major + 1))
     minor=0
     patch=0
-  elif echo "$subject_lines" | grep -q "^major"; then
-    major=$((major + 1))
-    minor=0
-    patch=0
-  elif echo "$subject_lines" | grep -q "^feat"; then
+  elif echo "$log_lines" | grep -q "feat"; then
     minor=$((minor + 1))
     patch=0
-  elif echo "$subject_lines" | grep -q "^fix"; then
+  elif echo "$log_lines" | grep -q "fix"; then
     patch=$((patch + 1))
   fi
 
@@ -37,8 +32,7 @@ main() {
   mkdir -p dist/
   echo $new_tag >dist/releasetag.txt
   echo "$log_lines" >dist/changelog.md
-  echo "Version: $latest_tag -> $new_tag"
-  echo "Changelog:"
+  echo "Semantic version tag: $latest_tag -> $new_tag"
   cat dist/changelog.md
 
   return 0
