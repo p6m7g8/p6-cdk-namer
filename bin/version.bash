@@ -24,8 +24,6 @@ main() {
     patch=0
   elif echo "$log_lines" | grep -q "fix"; then
     patch=$((patch + 1))
-  else
-    patch=$((patch + 1))
   fi
 
   local new_tag="$major.$minor.$patch"
