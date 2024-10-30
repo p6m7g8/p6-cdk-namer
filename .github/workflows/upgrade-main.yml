@@ -36,7 +36,6 @@ jobs:
             ${{ runner.os }}-node_modules-
       - name: Update Deps
         run: |
-          sudo corepack up
           yarn up
           git diff
       - name: Create Pull Request
