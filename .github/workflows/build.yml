@@ -32,5 +32,9 @@ jobs:
             ${{ runner.os }}-node_modules-
       - name: Run build
         run: yarn run ci:gha
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4.6.0
+        with:
+          directory: coverage
       - name: Run Package
         run: yarn run jsii:pacmak:parallel
