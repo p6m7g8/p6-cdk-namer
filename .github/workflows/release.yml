@@ -157,4 +157,51 @@ jobs:
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
         run: |
-          pnpm run publish:nuget
+          yarn run publish:nuget
+  release_golang:
+    name: Release to GoLang
+    needs: release
+    runs-on: ubuntu-latest
+    container:
+      image: jsii/superchain:1-bookworm-slim-node22
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Restore NPM node_modules
+        uses: actions/cache/restore@v4.1.2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - name: Install node_modules
+        run: |
+          sudo corepack enable
+          yarn install
+      - name: Cache NPM node_modules
+        uses: actions/cache@v4.1.2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - name: Bump version
+        run: bin/version.bash
+      - name: Compile
+        run: yarn run compile
+      - name: JSII Pacmak GoLang
+        run: yarn run jsii:pacmak:golang
+      - name: Publish to GoLang
+        env:
+          GIT_USER_NAME: github-actions
+          GIT_USER_EMAIL: github-actions@github.com
+          GH_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GO_GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "$GIT_USER_NAME"
+          git config --global user.email "$GIT_USER_EMAIL"
+          git remote set-url origin "https://$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          yarn run publish:golang
