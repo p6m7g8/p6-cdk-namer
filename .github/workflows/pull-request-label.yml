@@ -1,0 +1,26 @@
+name: Label PRs
+
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled]
+
+jobs:
+  label_core_contributions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label core contributions
+        if: github.actor == 'pgollucci'
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        with:
+          labels: contribution/core
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  label_auto_merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add auto-merge label for core contributions
+        if: contains(github.event.pull_request.labels.*.name, 'contribution/core') && !contains(github.event.pull_request.labels.*.name, 'auto-merge')
+        uses: actions-ecosystem/action-add-labels@v1.1.0
+        with:
+          labels: auto-merge
+          github_token: ${{ secrets.GITHUB_TOKEN }}
