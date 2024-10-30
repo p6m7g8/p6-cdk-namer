@@ -94,7 +94,7 @@
     "alias"
   ],
   "main": "lib/index.js",
-  "types": "src/index.d.ts",
+  "types": "lib/index.d.ts",
   "license": "Apache-2.0",
   "version": "0.0.0",
   "jsii": {
