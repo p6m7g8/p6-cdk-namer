@@ -1,0 +1,74 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    steps:
+      - name: no-op
+        run: echo "No-op"
+  release_github:
+    name: Release to Github
+    needs: release
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Bump version
+        run: bin/version.bash
+      - name: Github Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.P6_A_GH_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF: ${{ github.ref }}
+        run: |
+            gh release create $(cat dist/releasetag.txt) -R "$GITHUB_REPOSITORY" -F dist/changelog.md -t $(cat dist/releasetag.txt) --target "$GITHUB_REF"
+  release_npmjs:
+    name: Release to NPM JS
+    needs: release_github
+    runs-on: ubuntu-latest
+    container:
+      image: jsii/superchain:1-bookworm-slim-node22
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+      - name: Restore NPM node_modules
+        uses: actions/cache/restore@v4.1.2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - name: Install node_modules
+        run: |
+          sudo corepack enable
+          yarn install
+      - name: Cache NPM node_modules
+        uses: actions/cache@v4.1.2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules--${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - name: Bump version
+        run: bin/version.bash
+      - name: Compile
+        run: yarn run compile
+      - name: JSII Pacmak JS
+        run: yarn run jsii:pacmak:js
+      - name: Publish to NPM
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn run publish:npm
