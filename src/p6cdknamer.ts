@@ -21,7 +21,6 @@ export class P6CDKNamer extends cdk.Resource {
       tracing: lambda.Tracing.ACTIVE,
       bundling: {
         minify: true,
-        externalModules: ['aws-sdk'],
       },
     })
 
