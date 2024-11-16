@@ -55,7 +55,7 @@ digraph "Diagram" {
         "VisualizeStack/MyP6CDKNamer/p6cdknamer" [
           label = " p6cdknamer",
           fontsize = 12,
-          image = "/Users/philip/.p6/p6m7g8/p6-cdk-namer/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          image = "/Users/pgollucci/.p6/p6m7g8/p6-cdk-namer/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
           imagescale = "true",
           imagepos = "tc",
           penwidth = "0",
@@ -68,7 +68,7 @@ digraph "Diagram" {
         "VisualizeStack/MyP6CDKNamer/P6CDKNamer--CR" [
           label = " CloudFormation\nCustomResource\nP6CDKNamer--CR",
           fontsize = 12,
-          image = "/Users/philip/.p6/p6m7g8/p6-cdk-namer/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+          image = "/Users/pgollucci/.p6/p6m7g8/p6-cdk-namer/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
           imagescale = "true",
           imagepos = "tc",
           penwidth = "0",
@@ -81,7 +81,7 @@ digraph "Diagram" {
         "VisualizeStack/MyP6CDKNamer/P6CDKNamer--Provider/framework-onEvent" [
           label = " framework-onEvent",
           fontsize = 12,
-          image = "/Users/philip/.p6/p6m7g8/p6-cdk-namer/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          image = "/Users/pgollucci/.p6/p6m7g8/p6-cdk-namer/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
           imagescale = "true",
           imagepos = "tc",
           penwidth = "0",
