@@ -87,7 +87,8 @@
   },
   "bundledDependencies": [
     "@aws-sdk/client-iam",
-    "cdk-iam-floyd"
+    "cdk-iam-floyd",
+    "winston"
   ],
   "keywords": [
     "aws",
