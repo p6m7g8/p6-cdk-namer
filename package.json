@@ -81,12 +81,14 @@
     "constructs": "^10.4.2"
   },
   "dependencies": {
-    "aws-sdk": "^2.1692.0",
-    "cdk-iam-floyd": "^0.658.0"
+    "@aws-sdk/client-iam": "^3.693.0",
+    "cdk-iam-floyd": "^0.658.0",
+    "winston": "^3.17.0"
   },
   "bundledDependencies": [
-    "aws-sdk",
-    "cdk-iam-floyd"
+    "@aws-sdk/client-iam",
+    "cdk-iam-floyd",
+    "winston"
   ],
   "keywords": [
     "aws",
