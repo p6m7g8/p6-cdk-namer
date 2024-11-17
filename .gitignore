@@ -3,6 +3,7 @@ assets/
 !assets/diagram.dot
 !assets/diagram.png
 coverage/
+cytoscape/
 dist/
 lib/
 node_modules/
