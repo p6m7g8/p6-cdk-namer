@@ -20,6 +20,7 @@ pull_request_rules:
       - status-success=build
     actions:
       delete_head_branch:
+      queue:
   - name: Label core contributions
     actions:
       label:
@@ -36,9 +37,5 @@ pull_request_rules:
     conditions:
       - label=contribution/core
       - label!=auto-merge
-  - name: refactored queue action rule
-    conditions: []
-    actions:
-      queue:
 merge_queue:
   max_parallel_checks: 1
