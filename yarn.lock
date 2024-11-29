@@ -6733,9 +6733,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsii-docgen@npm:^10.5.7":
-  version: 10.5.7
-  resolution: "jsii-docgen@npm:10.5.7"
+"jsii-docgen@npm:^10.6.0":
+  version: 10.6.0
+  resolution: "jsii-docgen@npm:10.6.0"
   dependencies:
     "@jsii/spec": "npm:^1.105.0"
     case: "npm:^1.6.3"
@@ -6746,10 +6746,10 @@ __metadata:
     semver: "npm:^7.6.3"
     yargs: "npm:^16.2.0"
   peerDependencies:
-    jsii-rosetta: ^1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0 || ~5.4.0 || ~5.5.0
+    jsii-rosetta: ^1.85.0 || ~5.0.14 || ~5.1.2 || ~5.2.0 || ~5.3.0 || ~5.4.0 || ~5.5.0 || ~5.6.0 || ~5.7.0
   bin:
     jsii-docgen: bin/jsii-docgen
-  checksum: 10c0/a677ca4285c5351a9eb1788f6ed7dbe54c3467feadc5a66dcc7f165b0611ef6d66a1a0f39c741b3b505b756b7c163f34a14ab040033fbc7170e91eab07ddff4d
+  checksum: 10c0/e7e537f883048f2ed788976627e8688f23a159ee6c6bbcf64cadd5c1e31a0ba20c51a4d08061e6c16ff6b3ef98a84f5aa7ea1543aefff7d5b6768ce91e5d4dd6
   languageName: node
   linkType: hard
 
@@ -8186,10 +8186,10 @@ __metadata:
     jest: "npm:^29.7.0"
     jsii: "npm:^5.7.0"
     jsii-diff: "npm:^1.105.0"
-    jsii-docgen: "npm:^10.5.7"
+    jsii-docgen: "npm:^10.6.0"
     jsii-pacmak: "npm:^1.105.0"
     jsii-rosetta: "npm:^5.7.0"
-    publib: "npm:^0.2.920"
+    publib: "npm:^0.2.921"
     ts-jest: "npm:^29.2.5"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.7.2"
@@ -8445,9 +8445,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"publib@npm:^0.2.920":
-  version: 0.2.920
-  resolution: "publib@npm:0.2.920"
+"publib@npm:^0.2.921":
+  version: 0.2.921
+  resolution: "publib@npm:0.2.921"
   dependencies:
     "@aws-sdk/client-codeartifact": "npm:^3.699.0"
     "@aws-sdk/credential-providers": "npm:^3.699.0"
@@ -8474,7 +8474,7 @@ __metadata:
     publib-npm: bin/publib-npm
     publib-nuget: bin/publib-nuget
     publib-pypi: bin/publib-pypi
-  checksum: 10c0/9ba1613eb05d44ed1d7198146e55096a79856b58d8528ee583bf9571b74b335ba41f5522fa19b0c974226a751dea8f28c50eebb0463c91b22efecd3c8ba7c11b
+  checksum: 10c0/76e28d81d08fcf952b330e4ededab8289a5cac8fc89277d0e1a8bf9bdaf9d4302314ff4ca83c15be0c72c87f26229f823b39b0056ee339069da06a4076abd5de
   languageName: node
   linkType: hard
 
