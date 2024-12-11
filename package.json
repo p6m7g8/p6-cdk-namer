@@ -54,7 +54,7 @@
     "@antfu/eslint-config": "^3.11.2",
     "@types/aws-lambda": "^8.10.146",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.10.2",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "aws-cdk": "^2.172.0",
@@ -81,7 +81,7 @@
     "constructs": "^10.4.2"
   },
   "dependencies": {
-    "@aws-sdk/client-iam": "^3.699.0",
+    "@aws-sdk/client-iam": "^3.709.0",
     "cdk-iam-floyd": "^0.658.0",
     "winston": "^3.17.0"
   },
