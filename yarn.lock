@@ -6824,9 +6824,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsii@npm:^5.7.1":
-  version: 5.7.1
-  resolution: "jsii@npm:5.7.1"
+"jsii@npm:^5.7.2":
+  version: 5.7.2
+  resolution: "jsii@npm:5.7.2"
   dependencies:
     "@jsii/check-node": "npm:1.105.0"
     "@jsii/spec": "npm:^1.105.0"
@@ -6842,7 +6842,7 @@ __metadata:
     yargs: "npm:^17.7.2"
   bin:
     jsii: bin/jsii
-  checksum: 10c0/5994b91ad5f1e4022748cb9fb0c6829fef7d7d3329abbe9a80295c586648b736de52f6128be7633689554739d9d2cf6a80d2d7ae860a45d3e3fb883044f25988
+  checksum: 10c0/cc8c7539773e6101e2528eb2b6116899e659a8335938644bfa9b0177395ed45d12a2d712119d41295a2f96f56829b5120ae591f16d4ad66e7b9f76f90cd4dbe0
   languageName: node
   linkType: hard
 
@@ -8214,7 +8214,7 @@ __metadata:
     eslint-plugin-import: "npm:^2.31.0"
     http-server: "npm:^14.1.1"
     jest: "npm:^29.7.0"
-    jsii: "npm:^5.7.1"
+    jsii: "npm:^5.7.2"
     jsii-diff: "npm:^1.105.0"
     jsii-docgen: "npm:^10.6.0"
     jsii-pacmak: "npm:^1.105.0"
