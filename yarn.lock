@@ -246,7 +246,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-codeartifact@npm:^3.713.0":
+"@aws-sdk/client-codeartifact@npm:^3.714.0":
   version: 3.714.0
   resolution: "@aws-sdk/client-codeartifact@npm:3.714.0"
   dependencies:
@@ -688,9 +688,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/credential-providers@npm:^3.713.0":
-  version: 3.714.0
-  resolution: "@aws-sdk/credential-providers@npm:3.714.0"
+"@aws-sdk/credential-providers@npm:^3.714.0":
+  version: 3.715.0
+  resolution: "@aws-sdk/credential-providers@npm:3.715.0"
   dependencies:
     "@aws-sdk/client-cognito-identity": "npm:3.714.0"
     "@aws-sdk/client-sso": "npm:3.714.0"
@@ -709,7 +709,7 @@ __metadata:
     "@smithy/property-provider": "npm:^3.1.11"
     "@smithy/types": "npm:^3.7.2"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/08226438347a7976f2f7c45dc8ed3b66e3047a4cac43387ea7a09b93bae981c648a95042a7c297e7054fc1b6582991948f00574c51284340d9c85a51b4686c6d
+  checksum: 10c0/3738a505e749c9544d7269412b00d383c1e671e10ab74901824796ddb75d1d6d732ab26d4163dc3653ee61115e22f8f5d6ee7735a4bc7f3d298356b2e7ecface
   languageName: node
   linkType: hard
 
@@ -792,7 +792,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/types@npm:3.714.0, @aws-sdk/types@npm:^3.713.0":
+"@aws-sdk/types@npm:3.714.0, @aws-sdk/types@npm:^3.714.0":
   version: 3.714.0
   resolution: "@aws-sdk/types@npm:3.714.0"
   dependencies:
@@ -8350,7 +8350,7 @@ __metadata:
     jsii-docgen: "npm:^10.6.1"
     jsii-pacmak: "npm:^1.106.0"
     jsii-rosetta: "npm:^5.7.1"
-    publib: "npm:^0.2.925"
+    publib: "npm:^0.2.926"
     ts-jest: "npm:^29.2.5"
     ts-node: "npm:^10.9.2"
     typescript: "npm:^5.7.2"
@@ -8606,13 +8606,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"publib@npm:^0.2.925":
-  version: 0.2.925
-  resolution: "publib@npm:0.2.925"
+"publib@npm:^0.2.926":
+  version: 0.2.926
+  resolution: "publib@npm:0.2.926"
   dependencies:
-    "@aws-sdk/client-codeartifact": "npm:^3.713.0"
-    "@aws-sdk/credential-providers": "npm:^3.713.0"
-    "@aws-sdk/types": "npm:^3.713.0"
+    "@aws-sdk/client-codeartifact": "npm:^3.714.0"
+    "@aws-sdk/credential-providers": "npm:^3.714.0"
+    "@aws-sdk/types": "npm:^3.714.0"
     "@types/fs-extra": "npm:^8.0.0"
     fs-extra: "npm:^8.0.0"
     glob: "npm:10.0.0"
@@ -8635,7 +8635,7 @@ __metadata:
     publib-npm: bin/publib-npm
     publib-nuget: bin/publib-nuget
     publib-pypi: bin/publib-pypi
-  checksum: 10c0/9f8f3b504488cf1e574be41516ce68d29175c09fd6e36b63cb11bd52dadf003912a79ce0791db8101ae556336e0067729f70139a660271d62b802b870546e06e
+  checksum: 10c0/9b1b4427db6e38ed318ea8911d5d8b85a50224a6b0986dfabd735dcebc35dd620330a298904688a8fd92e7173f161962c7d055889f3adbf1c1662cb5a30c7a53
   languageName: node
   linkType: hard
 
