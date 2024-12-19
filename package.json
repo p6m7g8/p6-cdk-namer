@@ -71,7 +71,7 @@
     "jsii-docgen": "^10.6.1",
     "jsii-pacmak": "^1.106.0",
     "jsii-rosetta": "^5.7.1",
-    "publib": "^0.2.925",
+    "publib": "^0.2.926",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
