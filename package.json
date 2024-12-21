@@ -61,7 +61,7 @@
     "aws-cdk-lib": "^2.173.2",
     "cdk-dia": "^0.11.0",
     "constructs": "^10.4.2",
-    "esbuild": "^0.24.1",
+    "esbuild": "^0.24.2",
     "eslint": "^9.17.0",
     "eslint-plugin-import": "^2.31.0",
     "http-server": "^14.1.1",
@@ -71,7 +71,7 @@
     "jsii-docgen": "^10.6.1",
     "jsii-pacmak": "^1.106.0",
     "jsii-rosetta": "^5.7.1",
-    "publib": "^0.2.927",
+    "publib": "^0.2.928",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
