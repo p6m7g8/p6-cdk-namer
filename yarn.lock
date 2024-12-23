@@ -3212,10 +3212,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xmldom/xmldom@npm:^0.9.5":
-  version: 0.9.5
-  resolution: "@xmldom/xmldom@npm:0.9.5"
-  checksum: 10c0/5ff2016050277bcee95f3fb958c442c9aa149214d0e7a72c3c0d3797e9e77a2636398f16b6a50b2bc6540e59150d1bc9c968d01a2bb4a18316ed09f8d22f8d29
+"@xmldom/xmldom@npm:^0.9.6":
+  version: 0.9.6
+  resolution: "@xmldom/xmldom@npm:0.9.6"
+  checksum: 10c0/154f67a9b3ea0700d5ee88eb6fdf1380cb0eb448337e7e52d6f5f65f19fda362d1dac086f960445bac90475d5a208141619682c981f106c6b581841d05efccd0
   languageName: node
   linkType: hard
 
@@ -6942,13 +6942,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsii-rosetta@npm:^5.7.1":
-  version: 5.7.1
-  resolution: "jsii-rosetta@npm:5.7.1"
+"jsii-rosetta@npm:^5.7.2":
+  version: 5.7.2
+  resolution: "jsii-rosetta@npm:5.7.2"
   dependencies:
-    "@jsii/check-node": "npm:1.105.0"
-    "@jsii/spec": "npm:^1.105.0"
-    "@xmldom/xmldom": "npm:^0.9.5"
+    "@jsii/check-node": "npm:1.106.0"
+    "@jsii/spec": "npm:^1.106.0"
+    "@xmldom/xmldom": "npm:^0.9.6"
     chalk: "npm:^4"
     commonmark: "npm:^0.31.2"
     fast-glob: "npm:^3.3.2"
@@ -6961,13 +6961,13 @@ __metadata:
     yargs: "npm:^17.7.2"
   bin:
     jsii-rosetta: bin/jsii-rosetta
-  checksum: 10c0/76e1dd20ccbcce44d23174feb9be2871e77c1381fe6e5ee78e540e8925e8cb0a6a526f6f984ea80499005d736ff43e6400393898f7a28cd5209550bed18cc531
+  checksum: 10c0/54a59d1afa3d2bcee0d9cd716cc46271720aec5e753f2b6feaf55969215ae6c4d0b4677f5a2205d721d4218929f2bba9a0e6e856d46f76911525e0d980fd50be
   languageName: node
   linkType: hard
 
-"jsii@npm:^5.7.3":
-  version: 5.7.3
-  resolution: "jsii@npm:5.7.3"
+"jsii@npm:^5.7.4":
+  version: 5.7.4
+  resolution: "jsii@npm:5.7.4"
   dependencies:
     "@jsii/check-node": "npm:1.106.0"
     "@jsii/spec": "npm:^1.106.0"
@@ -6983,7 +6983,7 @@ __metadata:
     yargs: "npm:^17.7.2"
   bin:
     jsii: bin/jsii
-  checksum: 10c0/8f51643bf50db7fe935aeee895a2ecb36d440c70a2a6bf3ad61c77707351955bc50de2f959d8105085de4b4e9567aadaede4f0918ae32436b38083b3dc82551b
+  checksum: 10c0/d147a0f1faf21747bbb3de5ada0e21448f66ad39f5c62948518daf18a3f9f0c88b3544cf994bbcabecb51cbad9a4fec41956c1e5dbe7ae3e44ddd119c2a330f8
   languageName: node
   linkType: hard
 
@@ -8355,11 +8355,11 @@ __metadata:
     eslint-plugin-import: "npm:^2.31.0"
     http-server: "npm:^14.1.1"
     jest: "npm:^29.7.0"
-    jsii: "npm:^5.7.3"
+    jsii: "npm:^5.7.4"
     jsii-diff: "npm:^1.106.0"
     jsii-docgen: "npm:^10.6.1"
     jsii-pacmak: "npm:^1.106.0"
-    jsii-rosetta: "npm:^5.7.1"
+    jsii-rosetta: "npm:^5.7.2"
     publib: "npm:^0.2.928"
     ts-jest: "npm:^29.2.5"
     ts-node: "npm:^10.9.2"
