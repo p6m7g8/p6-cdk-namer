@@ -57,8 +57,8 @@
     "@types/node": "^22.10.5",
     "@typescript-eslint/eslint-plugin": "^8.19.0",
     "@typescript-eslint/parser": "^8.19.0",
-    "aws-cdk": "^2.173.4",
-    "aws-cdk-lib": "^2.173.4",
+    "aws-cdk": "^2.174.0",
+    "aws-cdk-lib": "^2.174.0",
     "cdk-dia": "^0.11.0",
     "constructs": "^10.4.2",
     "esbuild": "^0.24.2",
@@ -71,7 +71,7 @@
     "jsii-docgen": "^10.6.1",
     "jsii-pacmak": "^1.106.0",
     "jsii-rosetta": "^5.7.2",
-    "publib": "^0.2.929",
+    "publib": "^0.2.930",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
@@ -82,7 +82,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-iam": "^3.721.0",
-    "cdk-iam-floyd": "^0.658.0",
+    "cdk-iam-floyd": "^0.659.0",
     "winston": "^3.17.0"
   },
   "bundledDependencies": [
