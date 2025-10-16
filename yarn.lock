@@ -4703,16 +4703,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cdk-iam-floyd@npm:^0.723.0":
-  version: 0.723.0
-  resolution: "cdk-iam-floyd@npm:0.723.0"
+"cdk-iam-floyd@npm:^0.724.0":
+  version: 0.724.0
+  resolution: "cdk-iam-floyd@npm:0.724.0"
   dependencies:
     "@udondan/common-substrings": "npm:3.0.2"
     regex-parser: "npm:2.3.1"
   peerDependencies:
     aws-cdk-lib: ^2.0.0
     constructs: ^10.0.0
-  checksum: 10c0/3b7211ba7c7792b060fb05dc9c05e973dabafb8bf13a8a1e031071ab0bc137549513d6d57e08ac0ea8d498ae57ac006fdc529fa9650ddbc3581061266ac25857
+  checksum: 10c0/5f5f069ca3c3138509f0b6cbafefb73d967b46fdcaa2acb9ab296aeed3dc8513aa3e8c5eb0f6dccb3f0cd4c7c7b735234f13900946a58e7f118d290cb43ad804
   languageName: node
   linkType: hard
 
@@ -9326,7 +9326,7 @@ __metadata:
     aws-cdk: "npm:^2.1030.0"
     aws-cdk-lib: "npm:^2.220.0"
     cdk-dia: "npm:^0.12.1"
-    cdk-iam-floyd: "npm:^0.723.0"
+    cdk-iam-floyd: "npm:^0.724.0"
     constructs: "npm:^10.4.2"
     esbuild: "npm:^0.25.11"
     eslint: "npm:^9.37.0"
