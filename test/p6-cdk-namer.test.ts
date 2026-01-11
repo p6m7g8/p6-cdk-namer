@@ -17,7 +17,7 @@ it('p6CDKNamer components', () => {
   const template = Template.fromStack(stack)
   template.hasResourceProperties('AWS::Lambda::Function', {
     Handler: 'index.handler',
-    Runtime: 'nodejs22.x',
+    Runtime: 'nodejs24.x',
   })
   template.resourceCountIs('AWS::Lambda::Function', 2) // Custom Resource Handler counts too
 })
