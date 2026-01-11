@@ -16,7 +16,7 @@ export class P6CDKNamer extends cdk.Resource {
     const policy = new floyd.Statement.Iam().allow().toCreateAccountAlias()
 
     const onEvent = new lambdajs.NodejsFunction(this, 'p6cdknamer', {
-      runtime: lambda.Runtime.NODEJS_22_X,
+      runtime: lambda.Runtime.NODEJS_24_X,
       timeout: cdk.Duration.seconds(2),
       tracing: lambda.Tracing.ACTIVE,
       bundling: {
